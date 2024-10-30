@@ -9,6 +9,9 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       packages.${system}.default = pkgs.hello;
-      hydraJobs.${system}.packages.default = pkgs.hello;
+      hydraJobs.${system} = {
+        packages.hello = pkgs.hello;
+        packages.default = pkgs.hello;
+      };
     };
 }
