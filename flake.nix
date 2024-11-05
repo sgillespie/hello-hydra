@@ -12,6 +12,7 @@
       hydraJobs.${system} = {
         packages.hello = pkgs.hello;
         packages.default = pkgs.hello;
+        packages.hello2 = pkgs.hello;
       };
     };
 }
